@@ -1,0 +1,3 @@
+English e1;
+e1.starlight4() = Lesson8.doTheIroning() // do the ironing - гладить
+e1.verbs() = IrregularVerbs.be() // was/were | been | быть, являться

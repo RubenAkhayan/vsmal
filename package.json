@@ -1,0 +1,306 @@
+{
+  "name": "vsma",
+  "displayName": "VS-Multi-Adviser",
+  "description": "Multi-Adviser Language for Visual Studio Code",
+  "author": {
+    "name": "RubenAkhayan",
+    "email": "rubenakh@gmail.com",
+    "url": "http://multi-adviser.com/"
+  },
+  "version": "0.0.1",
+  "publisher": "RubenAkhayan",
+  "license": "MIT",
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^1.38.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "keywords": [
+    "multi-adviser",
+    "mal",
+    "ma"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RubenAkhayan/vsmal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RubenAkhayan/vsmal/issues"
+  },
+  "activationEvents": [
+    "onLanguage:ma"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "ma",
+        "aliases": [
+          "MA",
+          "ma"
+        ],
+        "extensions": [
+          ".mal"
+        ],
+        "configuration": "./client/ma.configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ma",
+        "scopeName": "source.ma",
+        "path": "./client/syntaxes/ma.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "ma",
+        "path": "./client/snippets/ma.json"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "MA configuration",
+      "properties": {
+        "ma.intelliSense": {
+          "type": "array",
+          "default": [
+            {"label": "English", "type": 1, "kind": 25, "data": [
+              {"label": "starlight4", "kind": "Function", "detail": "<English>.starlight4()", "documentation": "Returns starlight4.", "insertText": "starlight4() = "},
+              {"label": "verbs", "kind": "Function", "detail": "<English>.verbs()", "documentation": "Returns Verbs.", "insertText": "verbs() = "}
+          ], "detail": "English", "documentation": "<English>", "insertText": "English "},
+  
+          {"label": "Lesson8", "type": 0, "theme":"starlight4", "kind": 25, "data": [
+              {"label": "wash the dishes", "kind": "Interface", "detail": "washTheDishes", "documentation": "wash the dishes - мыть посуду", "insertText": "washTheDishes(${1}) // wash the dishes - мыть посуду"},
+              {"label": "mop the floor", "kind": "Interface", "detail": "mopTheFloor", "documentation": "mop the floor - мыть пол", "insertText": "mopTheFloor(${1}) // mop the floor - мыть пол"},
+              {"label": "vacuum the carpet", "kind": "Interface", "detail": "vacuumTheCarpet", "documentation": "vacuum the carpet - пылесосить ковер", "insertText": "vacuumTheCarpet(${1}) // vacuum the carpet - пылесосить ковер"},
+              {"label": "make the bed", "kind": "Interface", "detail": "makeTheBed", "documentation": "make the bed - заправлять кровать", "insertText": "makeTheBed(${1}) // make the bed - заправлять кровать"},
+              {"label": "water the plants", "kind": "Interface", "detail": "waterThePlants", "documentation": "water the plants - поливать растения", "insertText": "waterThePlants(${1}) // water the plants - поливать растения"},
+              {"label": "do the ironing", "kind": "Interface", "detail": "doTheIroning", "documentation": "do the ironing - гладить", "insertText": "doTheIroning(${1}) // do the ironing - гладить"},
+              {"label": "set the table", "kind": "Interface", "detail": "setTheTable", "documentation": "set the table - накрывать на стол", "insertText": "setTheTable(${1}) // set the table - накрывать на стол"},
+              {"label": "sea cow", "kind": "Interface", "detail": "seaCow", "documentation": "sea cow - морж", "insertText": "seaCow(${1}) // sea cow - морж"},
+              {"label": "tennis", "kind": "Interface", "detail": "tennis", "documentation": "tennis - теннис", "insertText": "tennis(${1}) // tennis - теннис"},
+              {"label": "race", "kind": "Interface", "detail": "race", "documentation": "race - гонки", "insertText": "race(${1}) // race - гонки"},
+              {"label": "water ski", "kind": "Interface", "detail": "waterSki", "documentation": "water ski - водные лыжи", "insertText": "waterSki(${1}) // water ski - водные лыжи"},
+              {"label": "hockey", "kind": "Interface", "detail": "hockey", "documentation": "hockey - хоккей", "insertText": "hockey(${1}) // hockey - хоккей"},
+              {"label": "net", "kind": "Interface", "detail": "net", "documentation": "net - сетка", "insertText": "net(${1}) // net - сетка"},
+              {"label": "volleyball", "kind": "Interface", "detail": "volleyball", "documentation": "volleyball - волейбол", "insertText": "volleyball(${1}) // volleyball - волейбол"},
+              {"label": "badminton", "kind": "Interface", "detail": "badminton", "documentation": "badminton - бадминтон", "insertText": "badminton(${1}) // badminton - бадминтон"},
+              {"label": "baseball", "kind": "Interface", "detail": "baseball", "documentation": "baseball - бейсбол", "insertText": "baseball(${1}) // baseball - бейсбол"}
+          ], "detail": "Lesson8", "documentation": "Lesson8"},
+  
+          {"label": "IrregularVerbs", "type": 0, "theme":"verbs", "kind": 25, "data": [
+              {"label": "be", "kind": "Interface", "detail": "<IrregularVerbs>.be()", "documentation": "was/were | been | быть, являться", "insertText": "be(${1}) // was/were | been | быть, являться"},
+              {"label": "beat", "kind": "Interface", "detail": "<IrregularVerbs>.beat()", "documentation": "beat | beaten | бить", "insertText": "beat(${1}) // beat | beaten | бить"},
+              {"label": "become", "kind": "Interface", "detail": "<IrregularVerbs>.become()", "documentation": "become | become | становиться", "insertText": "become(${1}) // become | become | становиться"},
+              {"label": "begin", "kind": "Interface", "detail": "<IrregularVerbs>.begin()", "documentation": "began | begun | начинать(ся)", "insertText": "begin(${1}) // began | begun | начинать(ся)"},
+              {"label": "bend", "kind": "Interface", "detail": "<IrregularVerbs>.bend()", "documentation": "bent | bent | сгибаться", "insertText": "bend(${1}) // bent | bent | сгибаться"},
+              {"label": "bind", "kind": "Interface", "detail": "<IrregularVerbs>.bind()", "documentation": "bound | bound | связывать", "insertText": "bind(${1}) // bound | bound | связывать"},
+              {"label": "bite", "kind": "Interface", "detail": "<IrregularVerbs>.bite()", "documentation": "bit | bitten | кусать(ся)", "insertText": "bite(${1}) // bit | bitten | кусать(ся)"},
+              {"label": "blow", "kind": "Interface", "detail": "<IrregularVerbs>.blow()", "documentation": "blew | blown | дуть", "insertText": "blow(${1}) // blew | blown | дуть"},
+              {"label": "breake", "kind": "Interface", "detail": "<IrregularVerbs>.breake()", "documentation": "broke | broken | ломать", "insertText": "breake(${1}) // broke | broken | ломать"},
+              {"label": "bring", "kind": "Interface", "detail": "<IrregularVerbs>.bring()", "documentation": "brought | brought | приносить", "insertText": "bring(${1}) // brought | brought | приносить"},
+              {"label": "build", "kind": "Interface", "detail": "<IrregularVerbs>.build()", "documentation": "built | built | строить", "insertText": "build(${1}) // built | built | строить"},
+              {"label": "burn", "kind": "Interface", "detail": "<IrregularVerbs>.burn()", "documentation": "burnt | burnt | жечь, гореть", "insertText": "burn(${1}) // burnt | burnt | жечь, гореть"},
+              {"label": "buy", "kind": "Interface", "detail": "<IrregularVerbs>.buy()", "documentation": "bought | bought | покупать", "insertText": "buy(${1}) // bought | bought | покупать"},
+              {"label": "catch", "kind": "Interface", "detail": "<IrregularVerbs>.catch()", "documentation": "caught | caught | ловить", "insertText": "catch(${1}) // caught | caught | ловить"},
+              {"label": "choose", "kind": "Interface", "detail": "<IrregularVerbs>.choose()", "documentation": "chose | chosen | выбирать", "insertText": "choose(${1}) // chose | chosen | выбирать"},
+              {"label": "come", "kind": "Interface", "detail": "<IrregularVerbs>.come()", "documentation": "came | come | приходить", "insertText": "come(${1}) // came | come | приходит"},
+              {"label": "cost", "kind": "Interface", "detail": "<IrregularVerbs>.cost()", "documentation": "cost | cost | стоить", "insertText": "cost(${1}) // cost | cost | стоить"},
+              {"label": "cut", "kind": "Interface", "detail": "<IrregularVerbs>.cut()", "documentation": "cut | cut | резать", "insertText": "cut(${1}) // cut | cut | резать"},
+              {"label": "dig", "kind": "Interface", "detail": "<IrregularVerbs>.dig()", "documentation": "dug | dug | рыть, копать", "insertText": "dig(${1}) // dug | dug | рыть, копать"},
+              {"label": "do", "kind": "Interface", "detail": "<IrregularVerbs>.do()", "documentation": "did | done | делать", "insertText": "do(${1}) // did | done | делать"},
+              {"label": "draw", "kind": "Interface", "detail": "<IrregularVerbs>.draw()", "documentation": "drew | drawn | рисовать", "insertText": "draw(${1}) // drew | drawn | рисовать"},
+              {"label": "dream", "kind": "Interface", "detail": "<IrregularVerbs>.dream()", "documentation": "dreamt | dreamt | мечтать", "insertText": "dream(${1}) // dreamt | dreamt | мечтать"},
+              {"label": "drink", "kind": "Interface", "detail": "<IrregularVerbs>.drink()", "documentation": "drank | drunk | пить", "insertText": "drink(${1}) // drank | drunk | пить"},
+              {"label": "drive", "kind": "Interface", "detail": "<IrregularVerbs>.drive()", "documentation": "drove | driven | ехать", "insertText": "drive(${1}) // drove | driven | ехать"},
+              {"label": "eat", "kind": "Interface", "detail": "<IrregularVerbs>.eat()", "documentation": "ate | eaten | есть, кушать", "insertText": "eat(${1}) // ate | eaten | есть, кушать"},
+              {"label": "fall", "kind": "Interface", "detail": "<IrregularVerbs>.fall()", "documentation": "fell | fallen | падать", "insertText": "fall(${1}) // fell | fallen | падать"},
+              {"label": "feed", "kind": "Interface", "detail": "<IrregularVerbs>.feed()", "documentation": "fed | fed | кормить", "insertText": "feed(${1}) // fed | fed | кормить"},
+              {"label": "feel", "kind": "Interface", "detail": "<IrregularVerbs>.feel()", "documentation": "felt | felt | чувствовать", "insertText": "feel(${1}) // felt | felt | чувствовать"},
+              {"label": "fight", "kind": "Interface", "detail": "<IrregularVerbs>.fight()", "documentation": "fought | fought | бороться", "insertText": "fight(${1}) // fought | fought | бороться"},
+              {"label": "find", "kind": "Interface", "detail": "<IrregularVerbs>.find()", "documentation": "found | found | находить", "insertText": "find(${1}) // found | found | находить"},
+              {"label": "fly", "kind": "Interface", "detail": "<IrregularVerbs>.fly()", "documentation": "flew | flown | летать", "insertText": "fly(${1}) // flew | flown | летать"},
+              {"label": "forbid", "kind": "Interface", "detail": "<IrregularVerbs>.forbid()", "documentation": "forbade | forbidden | запрещать", "insertText": "forbid(${1}) // forbade | forbidden | запрещать"},
+              {"label": "forget", "kind": "Interface", "detail": "<IrregularVerbs>.forget()", "documentation": "forgot | forgotten | забывать", "insertText": "forget(${1}) // forgot | forgotten | забывать"},
+              {"label": "freeze", "kind": "Interface", "detail": "<IrregularVerbs>.freeze()", "documentation": "froze | frozen | замерзать", "insertText": "freeze(${1}) // froze | frozen | замерзать"},
+              {"label": "get", "kind": "Interface", "detail": "<IrregularVerbs>.get()", "documentation": "got | got | получать", "insertText": "get(${1}) // got | got | получать"},
+              {"label": "give", "kind": "Interface", "detail": "<IrregularVerbs>.give()", "documentation": "gave | given | давать", "insertText": "give(${1}) // gave | given | давать"},
+              {"label": "go", "kind": "Interface", "detail": "<IrregularVerbs>.go()", "documentation": "went | gone | идти, ходить", "insertText": "go(${1}) // went | gone | идти, ходить"},
+              {"label": "grow", "kind": "Interface", "detail": "<IrregularVerbs>.grow()", "documentation": "grew | grown | расти", "insertText": "grow(${1}) // grew | grown | расти"},
+              {"label": "hang", "kind": "Interface", "detail": "<IrregularVerbs>.hang()", "documentation": "hung | hung | висеть", "insertText": "hang(${1}) // hung | hung | висеть"},
+              {"label": "have", "kind": "Interface", "detail": "<IrregularVerbs>.have()", "documentation": "had | had | иметь", "insertText": "have(${1}) // had | had | иметь"},
+              {"label": "hear", "kind": "Interface", "detail": "<IrregularVerbs>.hear()", "documentation": "heard | heard | слышать", "insertText": "hear(${1}) // heard | heard | слышать"},
+              {"label": "hide", "kind": "Interface", "detail": "<IrregularVerbs>.hide()", "documentation": "hid | hidden | прятаться", "insertText": "hide(${1}) // hid | hidden | прятаться"},
+              {"label": "hit", "kind": "Interface", "detail": "<IrregularVerbs>.hit()", "documentation": "hit | hit | ударять", "insertText": "hit(${1}) // hit | hit | ударять"},
+              {"label": "hold", "kind": "Interface", "detail": "<IrregularVerbs>.hold()", "documentation": "held | held | держать", "insertText": "hold(${1}) // held | held | держать"},
+              {"label": "hurt", "kind": "Interface", "detail": "<IrregularVerbs>.hurt()", "documentation": "hurt | hurt | ранить", "insertText": "hurt(${1}) // hurt | hurt | ранить"},
+              {"label": "keep", "kind": "Interface", "detail": "<IrregularVerbs>.keep()", "documentation": "kept | kept | хранить", "insertText": "keep(${1}) // kept | kept | хранить"},
+              {"label": "know", "kind": "Interface", "detail": "<IrregularVerbs>.know()", "documentation": "knew | known | знать", "insertText": "know(${1}) // knew | known | знать"},
+              {"label": "lay", "kind": "Interface", "detail": "<IrregularVerbs>.lay()", "documentation": "laid | laid | класть", "insertText": "lay(${1}) // laid | laid | класть"},
+              {"label": "lead", "kind": "Interface", "detail": "<IrregularVerbs>.lead()", "documentation": "led | led | вести", "insertText": "lead(${1}) // led | led | вести"},
+              {"label": "learn", "kind": "Interface", "detail": "<IrregularVerbs>.learn()", "documentation": "learnt | learnt | учить(ся)", "insertText": "learn(${1}) // learnt | learnt | учить(ся)"},
+              {"label": "leave", "kind": "Interface", "detail": "<IrregularVerbs>.leave()", "documentation": "left | left | оставлять", "insertText": "leave(${1}) // left | left | оставлять"},
+              {"label": "let", "kind": "Interface", "detail": "<IrregularVerbs>.let()", "documentation": "let | let | позволять", "insertText": "let(${1}) // let | let | позволять"},
+              {"label": "lie", "kind": "Interface", "detail": "<IrregularVerbs>.lie()", "documentation": "lay | lain | лежать", "insertText": "lie(${1}) // lay | lain | лежать"},
+              {"label": "light", "kind": "Interface", "detail": "<IrregularVerbs>.light()", "documentation": "lit | lit | зажизать", "insertText": "light(${1}) // lit | lit | зажизать"},
+              {"label": "lose", "kind": "Interface", "detail": "<IrregularVerbs>.lose()", "documentation": "lose | lose | терять", "insertText": "lose(${1}) // lose | lose | терять"},
+              {"label": "make", "kind": "Interface", "detail": "<IrregularVerbs>.make()", "documentation": "made | made | делать", "insertText": "make(${1}) // made | made | делать"},
+              {"label": "mean", "kind": "Interface", "detail": "<IrregularVerbs>.mean()", "documentation": "meant | meant | значить", "insertText": "mean(${1}) // meant | meant | значить"},
+              {"label": "meet", "kind": "Interface", "detail": "<IrregularVerbs>.meet()", "documentation": "met | met | встречать(ся)", "insertText": "meet(${1}) // met | met | встречать(ся)"},
+              {"label": "pay", "kind": "Interface", "detail": "<IrregularVerbs>.pay()", "documentation": "paid | paid | платить", "insertText": "pay(${1}) // paid | paid | платить"},
+              {"label": "put", "kind": "Interface", "detail": "<IrregularVerbs>.put()", "documentation": "put | put | класть", "insertText": "put(${1}) // put | put | класть"},
+              {"label": "read", "kind": "Interface", "detail": "<IrregularVerbs>.read()", "documentation": "read | read | читать", "insertText": "read(${1}) // read | read | читать"},
+              {"label": "ride", "kind": "Interface", "detail": "<IrregularVerbs>.ride()", "documentation": "rode | ridden | кататься", "insertText": "ride(${1}) // rode | ridden | кататься"},
+              {"label": "ring", "kind": "Interface", "detail": "<IrregularVerbs>.ring()", "documentation": "rang | rung | звонить", "insertText": "ring(${1}) // rang | rung | звонить"},
+              {"label": "rise", "kind": "Interface", "detail": "<IrregularVerbs>.rise()", "documentation": "rise | rose | подниматься", "insertText": "rise(${1}) // rise | rose | подниматься"},
+              {"label": "run", "kind": "Interface", "detail": "<IrregularVerbs>.run()", "documentation": "ran | run | бежать", "insertText": "run(${1}) // ran | run | бежать"},
+              {"label": "say", "kind": "Interface", "detail": "<IrregularVerbs>.say()", "documentation": "said | said | говорить", "insertText": "say(${1}) // said | said | говорить"},
+              {"label": "see", "kind": "Interface", "detail": "<IrregularVerbs>.see()", "documentation": "saw | seen | видеть", "insertText": "see(${1}) // saw | seen | видеть"},
+              {"label": "sell", "kind": "Interface", "detail": "<IrregularVerbs>.sell()", "documentation": "sold | sold | продавать", "insertText": "sell(${1}) // sold | sold | продавать"},
+              {"label": "send", "kind": "Interface", "detail": "<IrregularVerbs>.send()", "documentation": "sent | sent | посылать", "insertText": "send(${1}) // sent | sent | посылать"},
+              {"label": "set", "kind": "Interface", "detail": "<IrregularVerbs>.set()", "documentation": "set | set | ставить", "insertText": "set(${1}) // set | set | ставить"},
+              {"label": "shake", "kind": "Interface", "detail": "<IrregularVerbs>.shake()", "documentation": "shook | shaken | прясти", "insertText": "shake(${1}) // shook | shaken | прясти"},
+              {"label": "shine", "kind": "Interface", "detail": "<IrregularVerbs>.shine()", "documentation": "shone | shone | сиять", "insertText": "shine(${1}) // shone | shone | сиять"},
+              {"label": "shoot", "kind": "Interface", "detail": "<IrregularVerbs>.shoot()", "documentation": "shot | shot | стрелять", "insertText": "shoot(${1}) // shot | shot | стрелять"},
+              {"label": "show", "kind": "Interface", "detail": "<IrregularVerbs>.show()", "documentation": "showed | shown | показывать", "insertText": "show(${1}) // showed | shown | показывать"},
+              {"label": "shut", "kind": "Interface", "detail": "<IrregularVerbs>.shut()", "documentation": "shut | shut | закрывать", "insertText": "shut(${1}) // shut | shut | закрывать"},
+              {"label": "sing", "kind": "Interface", "detail": "<IrregularVerbs>.sing()", "documentation": "sang | sung | петь", "insertText": "sing(${1}) // sang | sung | петь"},
+              {"label": "sink", "kind": "Interface", "detail": "<IrregularVerbs>.sink()", "documentation": "sank | sunk | тонуть", "insertText": "sink(${1}) // sank | sunk | тонуть"},
+              {"label": "sit", "kind": "Interface", "detail": "<IrregularVerbs>.sit()", "documentation": "sat | sat | сидеть", "insertText": "sit(${1}) // sat | sat | сидеть"},
+              {"label": "sleep", "kind": "Interface", "detail": "<IrregularVerbs>.sleep()", "documentation": "slept | slept | спать", "insertText": "sleep(${1}) // slept | slept | спать"},
+              {"label": "smell", "kind": "Interface", "detail": "<IrregularVerbs>.smell()", "documentation": "smelt | smelt | пахнуть", "insertText": "smell(${1}) // smelt | smelt | пахнуть"},
+              {"label": "speak", "kind": "Interface", "detail": "<IrregularVerbs>.speak()", "documentation": "spoke | spoken | говорить", "insertText": "speak(${1}) // spoke | spoken | говорить"},
+              {"label": "spend", "kind": "Interface", "detail": "<IrregularVerbs>.spend()", "documentation": "spent | spent | тратить", "insertText": "spend(${1}) // spent | spent | тратить"},
+              {"label": "spring", "kind": "Interface", "detail": "<IrregularVerbs>.spring()", "documentation": "sprang | sprung | прыгать", "insertText": "spring(${1}) // sprang | sprung | прыгать"},
+              {"label": "stand", "kind": "Interface", "detail": "<IrregularVerbs>.stand()", "documentation": "stood | stood | стоять", "insertText": "stand(${1}) // stood | stood | стоять"},
+              {"label": "steal", "kind": "Interface", "detail": "<IrregularVerbs>.steal()", "documentation": "stole | stolen | красть", "insertText": "steal(${1}) // stole | stolen | красть"},
+              {"label": "strike", "kind": "Interface", "detail": "<IrregularVerbs>.strike()", "documentation": "struck | struck | ударять", "insertText": "strike(${1}) // struck | struck | ударять"},
+              {"label": "swear", "kind": "Interface", "detail": "<IrregularVerbs>.swear()", "documentation": "swore | sworn | клясться", "insertText": "swear(${1}) // swore | sworn | клясться"},
+              {"label": "sweep", "kind": "Interface", "detail": "<IrregularVerbs>.sweep()", "documentation": "swept | swept | подметать", "insertText": "sweep(${1}) // swept | swept | подметать"},
+              {"label": "swim", "kind": "Interface", "detail": "<IrregularVerbs>.swim()", "documentation": "swam | swum | плавать", "insertText": "swim(${1}) // swam | swum | плавать"},
+              {"label": "take", "kind": "Interface", "detail": "<IrregularVerbs>.take()", "documentation": "took | taken | брать", "insertText": "take(${1}) // took | taken | брать"},
+              {"label": "teach", "kind": "Interface", "detail": "<IrregularVerbs>.teach()", "documentation": "taught | taught | учить", "insertText": "teach(${1}) // taught | taught | учить"},
+              {"label": "tear", "kind": "Interface", "detail": "<IrregularVerbs>.tear()", "documentation": "tore | toren | рвать", "insertText": "tear(${1}) // tore | toren | рвать"},
+              {"label": "tell", "kind": "Interface", "detail": "<IrregularVerbs>.tell()", "documentation": "told | told | (рас)сказать", "insertText": "tell(${1}) // told | told | (рас)сказать"},
+              {"label": "think", "kind": "Interface", "detail": "<IrregularVerbs>.think()", "documentation": "thought | thought | думать", "insertText": "think(${1}) // thought | thought | думать"},
+              {"label": "throw", "kind": "Interface", "detail": "<IrregularVerbs>.throw()", "documentation": "threw | thrown | бросать", "insertText": "throw(${1}) // threw | thrown | бросать"},
+              {"label": "understand", "kind": "Interface", "detail": "<IrregularVerbs>.understand()", "documentation": "understood | understood | понимать", "insertText": "understand(${1}) // understood | understood | понимать"},
+              {"label": "wake", "kind": "Interface", "detail": "<IrregularVerbs>.wake()", "documentation": "woke | woken | просыпаться", "insertText": "wake(${1}) // woke | woken | просыпаться"},
+              {"label": "wear", "kind": "Interface", "detail": "<IrregularVerbs>.wear()", "documentation": "wore | worn | носить", "insertText": "wear(${1}) // wore | worn | носить"},
+              {"label": "win", "kind": "Interface", "detail": "<IrregularVerbs>.win()", "documentation": "won | won | выигрывать", "insertText": "win(${1}) // won | won | выигрывать"},
+              {"label": "write", "kind": "Interface", "detail": "<IrregularVerbs>.write()", "documentation": "wrote | written | писать", "insertText": "write(${1}) // wrote | written | писать"}
+          ], "detail": "IrregularVerbs", "documentation": "IrregularVerbs"}
+          ],
+          "description": "IntelliSense."
+        },
+        "matop.binPath": {
+          "type": "string",
+          "default": "",
+          "description": ""
+        },
+        "matop.args": {
+          "type": "array",
+          "default": [],
+          "description": ""
+        },
+        "ma.format.enable": {
+          "type":"boolean",
+          "default": "true"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "extension.ma.quit",
+        "title": "Quit",
+        "category": "MA"
+      },
+      {
+        "command": "extension.ma.reset",
+        "title": "Reset",
+        "category": "MA"
+      },
+      {
+        "command": "extension.ma.display.toggle.implicitArguments",
+        "title": "Display Implicit Arguments",
+        "category": "MA"
+      },
+      {
+        "command": "extension.ma.test",
+        "title": "Test",
+        "category": "MA"
+      }
+    ],
+    "keybindings": [
+      {
+        "key": "shift+alt+o",
+        "mac": "shift+ctrl+o",
+        "command": "extension.ma.test",
+        "when": "editorTextFocus && editorLangId == ma"
+      },
+      {
+        "key": "shift+alt+o",
+        "mac": "shift+ctrl+o",
+        "command": "extension.ma.test",
+        "when": "resourceScheme==ma-view"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "resourceLangId == ma",
+          "command": "extension.ma.test",
+          "group": "ma"
+        }
+      ]
+    }
+  },
+  "main": "./out/client/src/extension",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -b",
+    "watch": "tsc -b -w",
+    "test": "node ./node_modules/vscode/bin/test",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "@types/diff": "^4.0.2",
+    "@types/glob": "^7.1.1",
+    "@types/jquery": "^3.3.31",
+    "@types/mocha": "^5.2.7",
+    "@types/mustache": "4.0.0",
+    "@types/node": "^13.1.6",
+    "@types/sax": "^1.2.0",
+    "@types/semver": "^6.2.0",
+    "@types/ws": "^7.2.0",
+    "@types/xml2js": "^0.4.5",
+    "jquery": "^3.5.0",
+    "ts-loader": "^6.2.1",
+    "ts-prune": "^0.3.0",
+    "typescript": "^3.7.5",
+    "vsce": "^1.75.0",
+    "vscode": "^1.1.37",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "async": "^3.1.0",
+    "bufferutil": "^4.0.1",
+    "copy-webpack-plugin": "^5.1.2",
+    "diff": "4.0.2",
+    "mustache": "^4.0.0",
+    "pegjs": "^0.10.0",
+    "sax": "^1.2.4",
+    "semver": "^7.1.1",
+    "string-argv": "^0.3.1",
+    "utf-8-validate": "^5.0.2",
+    "vscode-jsonrpc": "^4.0.0",
+    "vscode-languageclient": "^5.2.1",
+    "vscode-languageserver": "^5.2.1",
+    "ws": "^7.2.1",
+    "xml2js": "^0.4.23"
+  }
+}

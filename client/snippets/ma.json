@@ -1,0 +1,9 @@
+{
+	".source.ma": {
+		"ma declaration": {
+			"prefix": "ma",
+			"body": "ma ${1:name}(${2:type} ${3:name}) {\n\t$0\n}",
+			"description": "Multi-Adviser."
+		}
+    }
+}
