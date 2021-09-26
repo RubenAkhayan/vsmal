@@ -15,10 +15,10 @@ Welcome! 👋🏻<br/>
 The recommended way to install VS-Multi-Adviser is via the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=RubenAkhayan.vsmal).
 
 ## Screenshots
-![screenshot1](https://github.com/RubenAkhayan/vsmal/blob/master/screenshots/screenshot1.png)
+![screenshot1](./images/screenshot1.png)
 
-![screenshot2](https://github.com/RubenAkhayan/vsmal/blob/master/screenshots/screenshot2.png)
+![screenshot2](./images/screenshot2.png)
 
-![screenshot3](https://github.com/RubenAkhayan/vsmal/blob/master/screenshots/screenshot3.png)
+![screenshot3](./images/screenshot3.png)
 
-![screenshot4](https://github.com/RubenAkhayan/vsmal/blob/master/screenshots/screenshot4.png)
+![screenshot4](./images/screenshot4.png)
